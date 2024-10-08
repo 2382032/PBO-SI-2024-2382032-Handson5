@@ -159,12 +159,9 @@ public class Main {
        if(selectedTodo.equals("x")){
            return;
        }
-       String newTodo = input("Masukan todo yang baru (x jika batal)");
-       if(selectedTodo.equals("x")){
-           return;
-       }
-       boolean isiEditTodoList = addTodoList(Integer.parseInt(selectedTodo), newTodo);
-       if (isiEditTodoList){
+
+       boolean succes = editTodoList(Integer.parseInt(selectedTodo), newTodo);
+       if (succes){
            System.out.println("Berhasil mengedit todo");
        }else {
            System.out.println("Gagal mengedit todo");
